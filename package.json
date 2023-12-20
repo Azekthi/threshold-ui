@@ -1,14 +1,14 @@
 {
   "name": "threshold-ui",
   "theme": "ui",
-  "version": "1.0.0",
-  "description": "Dark UI theme for Atom, with a more native Windows 10 feel.",
+  "version": "1.1.0",
+  "description": "Dark UI theme for Pulsar, with a more native Windows 10 feel.",
   "keywords": [
     "dark",
     "ui"
   ],
   "license": "MIT",
-  "repository": "https://github.com/binaryfunt/threshold-ui",
+  "repository": "https://github.com/azekthi/threshold-ui",
   "main": "lib/main",
   "engines": {
     "atom": ">=1.13.0"
