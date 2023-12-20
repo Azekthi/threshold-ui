@@ -8,18 +8,18 @@ html { font-size: @font-size; }
 
 // Large screen (>= 27")
 @media (min-width: 2560px) {
-  [@{theme-layoutmode}="auto"] { font-size: @font-size + 2px; }
+  [@{theme-layoutmode}="auto"] { font-size: (@font-size + 2px); }
 }
 
 // Medium screen (>= 20")
 @media (min-width: 1920px) {
-  [@{theme-layoutmode}="auto"] { font-size: @font-size + 1px; }
+  [@{theme-layoutmode}="auto"] { font-size: (@font-size + 1px); }
 }
 
 // Small screen (<= 13")
 
 .compact-mode() {
-  font-size: @font-size - 1px;
+  font-size: (@font-size - 1px);
 
   atom-workspace {
     padding-right: 0;

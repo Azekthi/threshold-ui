@@ -45,17 +45,17 @@
 .ui-saturation();
 
 .ui-lightness() when (@ui-s-l <  @ui-inv) {
-  @ui-lightness: @ui-s-l + 8%; // increase lightness when too dark
-  @ui-lightness-border: @ui-lightness*.3;
+  @ui-lightness: (@ui-s-l + 8%); // increase lightness when too dark
+  @ui-lightness-border: (@ui-lightness*.3);
 }
 .ui-lightness() when (@ui-s-l >= @ui-inv) {
   @ui-lightness: min(@ui-s-l, 20%); // limit max lightness (for light syntax themes)
-  @ui-lightness-border: @ui-lightness*.6;
+  @ui-lightness-border: (@ui-lightness*.6);
 }
 .ui-lightness();
 
 // Main colors -----------------
-@ui-fg:     hsl(@ui-hue, min(@ui-saturation, 18%), max(@ui-lightness*3, 66%) );
+@ui-fg:     hsl(@ui-hue, min(@ui-saturation, 18%), max((@ui-lightness*3), 66%) );
 @ui-bg:     hsl(@ui-hue, @ui-saturation, @ui-lightness); // normalized @syntax-background-color
 @ui-border: hsl(@ui-hue, @ui-saturation, @ui-lightness-border);
 
@@ -240,12 +240,12 @@
 // Sizes (Custom) -----------------
 
 @ui-size:                 1em;
-@ui-input-size:           @ui-size*1.15;
-@ui-padding:              @ui-size*1.5;
-@ui-padding-pane:         @ui-size*.5;
-@ui-padding-icon:         @ui-padding/3.3;
-@ui-line-height:          @ui-size*2;
-@ui-tab-height:           @ui-padding*2;
+@ui-input-size:           (@ui-size*1.15);
+@ui-padding:              (@ui-size*1.5);
+@ui-padding-pane:         (@ui-size*.5);
+@ui-padding-icon:         (@ui-padding/3.3);
+@ui-line-height:          (@ui-size*2);
+@ui-tab-height:           (@ui-padding*2);
 
 
 
